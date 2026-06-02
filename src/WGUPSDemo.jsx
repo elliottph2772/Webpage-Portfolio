@@ -85,8 +85,6 @@ function Typewriter({ lines, onDone }) {
   const timers = useRef([])
 
   useEffect(() => {
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    setRendered([])
     timers.current.forEach(clearTimeout)
     timers.current = []
     let cum = 0
@@ -159,7 +157,8 @@ export default function WGUPSDemo() {
     clearTimers()
     setStage(s)
     setDispatched(false)
-    setPkgs([0, 0, 0])
+    setPkgs(s === 2 ? [16, 16, 8] : [0, 0, 0])
+    if (s === 3) { setRv1('0'); setRv2('0'); setRv3('0%') }
   }
 
   useEffect(() => {
@@ -175,13 +174,10 @@ export default function WGUPSDemo() {
       })
     }
     if (stage === 2) {
-      // eslint-disable-next-line react-hooks/set-state-in-effect
-      setPkgs([16, 16, 8])
       const t = setTimeout(() => setDispatched(true), 400)
       timers.current.push(t)
     }
     if (stage === 3) {
-      setRv1('0'); setRv2('0'); setRv3('0%')
       const t1 = setTimeout(() => animateCount(setRv1, 0, 118, 1200, v => v.toFixed(1) + ' mi'), 4200)
       const t2 = setTimeout(() => animateCount(setRv2, 0, 40, 800, v => Math.round(v) + ' pkgs'), 4600)
       const t3 = setTimeout(() => animateCount(setRv3, 0, 84, 800, v => Math.round(v) + '%'), 5000)

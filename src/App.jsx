@@ -242,19 +242,15 @@ function HomePage() {
 
       <div className="home-about">
         {[
-          { label: 'Currently', text: 'B.S. Computer Science student at Western Governors University. Building foundational skills in software engineering.' },
-          { label: 'Interests', text: 'Coding, Gaming, PC hardware, AI Integration and The Detroit Lions.' },
-          { label: 'Looking For', text: 'Tech internships or Junior Software engineering roles where I can contribute real work while finishing my degree.' },
+          { label: 'Currently',      text: 'B.S. Computer Science student at Western Governors University. Building foundational skills in software engineering.' },
+          { label: 'Interests',      text: 'Coding, Gaming, PC hardware, AI Integration and The Detroit Lions.' },
+          { label: 'Looking For',    text: 'Tech internships or Junior Software engineering roles where I can contribute real work while finishing my degree.' },
         ].map((b, i) => (
-          <div className="about-block reveal" key={b.label} style={{ transitionDelay: `${i * 0.13}s` }}>
-            <div className="about-block-label">{b.label}</div>
+          <div className="about-block reveal" key={i} style={{ transitionDelay: `${i * 0.13}s` }}>
+            <div className="about-block-label">{b.labelNode ?? b.label}</div>
             <p>{b.text}</p>
           </div>
         ))}
-        <div className="about-block reveal" style={{ transitionDelay: '0.39s' }}>
-          <div className="about-block-label">Eternal<br />Halflife</div>
-          <p>A personal brand, derived from my initials that I came up with when I was younger.</p>
-        </div>
       </div>
 
       <footer className="home-footer reveal" style={{ transitionDelay: '0.52s' }}>
@@ -335,7 +331,6 @@ function ProjectsPage({ selected, setSelected }) {
     </div>
   )
 }
-
 
 const CAT_COLORS = {
   'Gen Ed':      '#ffd97f',
@@ -488,7 +483,7 @@ export default function App() {
   return (
       <>
         <nav>
-          <div className="nav-logo" onClick={() => { setActive('home'); setSelectedProject(null); setMenuOpen(false); window.scrollTo({ top: 0, behavior: 'instant' }) }} style={{cursor: 'pointer'}}>
+          <div className="nav-logo" onClick={() => handleTabClick('home')} style={{cursor: 'pointer'}}>
             Eternal<span>Halflife</span>
           </div>
           <div className="nav-links">
