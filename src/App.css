@@ -53,7 +53,7 @@ nav {
 .nav-logo {
   font-family: var(--fhead), sans-serif;
   font-weight: 800;
-  font-size: 1.38rem;
+  font-size: 1.52rem;
   letter-spacing: -0.03em;
   color: var(--accent);
 }
@@ -718,7 +718,7 @@ main {
 
   /* nav */
   nav { padding: 0 1rem; }
-  .nav-logo { font-size: 0.9rem; }
+  .nav-logo { font-size: 0.99rem; }
   .nav-links { display: none; }
   .progress-pct-follow { font-size: 1.5rem; }
 
