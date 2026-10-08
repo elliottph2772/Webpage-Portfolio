@@ -319,7 +319,9 @@ main {
 }
 .tech-card:hover {
   transform: translateY(-3px);
-  border-color: color-mix(in srgb, var(--icon-color) 45%, transparent);
+  border-color: color-mix(in srgb, var(--icon-color) 60%, transparent);
+  background: color-mix(in srgb, var(--icon-color) 12%, var(--surface));
+  box-shadow: 0 0 22px color-mix(in srgb, var(--icon-color) 28%, transparent);
 }
 .tech-name {
   font-size: 1rem;
@@ -456,6 +458,10 @@ main {
 }
 .project-card:hover {
   transform: translateX(4px);
+  border-color: color-mix(in srgb, var(--accent) 45%, transparent);
+  border-left-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 8%, var(--surface));
+  box-shadow: 0 0 24px color-mix(in srgb, var(--accent) 20%, transparent);
 }
 
 .project-top {

@@ -147,7 +147,7 @@ const projects = [
       'Claimable player character sheets',
       'HP, dice, initiative & inventory tracking',
     ],
-    color: '#9184d9',
+    color: '#b47cff',
   },
   {
     id: 3,
@@ -161,7 +161,7 @@ const projects = [
       'Real-time team & roster data',
       'Multi-game support',
     ],
-    color: '#ff6b6b',
+    color: '#ff8a3d',
   },
   {
     id: 4,
@@ -175,7 +175,7 @@ const projects = [
       'Infrastructure as Code (Terraform)',
       'In progress',
     ],
-    color: '#ff7fb2',
+    color: '#ff5c8a',
   },
   {
     id: 5,
