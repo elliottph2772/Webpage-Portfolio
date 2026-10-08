@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react'
 import { createPortal } from 'react-dom'
 import './App.css'
 import WGUPSDemo from './WGUPSDemo.jsx'
+import NocturneDemo from './NocturneDemo.jsx'
+import ScrimCoachDemo from './ScrimCoachDemo.jsx'
 import { SiPython, SiReact, SiJavascript, SiHtml5, SiGit, SiLinux, SiVite, SiCplusplus, SiNodedotjs, SiDocker, SiTerraform } from 'react-icons/si'
 import { FaDatabase, FaJava, FaAws, FaTerminal } from 'react-icons/fa'
 
@@ -148,6 +150,16 @@ const projects = [
       'HP, dice, initiative & inventory tracking',
     ],
     color: '#b47cff',
+    details: [
+      {
+        label: 'Interactive Demo',
+        component: <NocturneDemo />,
+      },
+      {
+        label: 'How It Works',
+        content: 'The game master runs a shared campaign from a console while players join from their own devices using a campaign code. Character sheets, HP, initiative, inventory, and dice all live in Supabase and sync to every client in real time. An AI game master layer powered by Claude handles narration and world-building on top of the live table.',
+      },
+    ],
   },
   {
     id: 3,
@@ -162,6 +174,16 @@ const projects = [
       'Multi-game support',
     ],
     color: '#ff8a3d',
+    details: [
+      {
+        label: 'Interactive Demo',
+        component: <ScrimCoachDemo />,
+      },
+      {
+        label: 'Overview',
+        content: 'A full-stack React + Supabase platform for competitive esports teams, gated behind Discord sign-in. The demo above is an abstract preview — the specifics are kept under wraps while the product is in active development.',
+      },
+    ],
   },
   {
     id: 4,
