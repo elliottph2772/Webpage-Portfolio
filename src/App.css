@@ -328,6 +328,58 @@ main {
   text-align: center;
 }
 
+/* ── CERTIFICATIONS ──────────────────────────────────────────────────────────── */
+.certs-section {
+  margin-top: 3rem;
+}
+.certs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.cert-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 1.5rem 1.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.cert-card:hover {
+  transform: translateY(-3px);
+}
+.cert-status {
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  width: fit-content;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+.cert-card--earned {
+  border-color: color-mix(in srgb, var(--accent) 40%, transparent);
+}
+.cert-card--earned .cert-status {
+  color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 14%, transparent);
+}
+.cert-card--planned .cert-status {
+  color: var(--muted);
+  background: color-mix(in srgb, var(--muted) 14%, transparent);
+}
+.cert-name {
+  font-family: var(--fhead), sans-serif;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--text);
+}
+.cert-issuer {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
 /* ── PROJECTS ────────────────────────────────────────────────────────────────── */
 .back-btn {
   background: none;
@@ -802,6 +854,11 @@ main {
   /* tech stack — 2 columns on mobile so cards don't overflow */
   .tech-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* certifications — single column on mobile */
+  .certs-grid {
+    grid-template-columns: 1fr;
   }
 
 }

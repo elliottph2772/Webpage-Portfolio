@@ -2,8 +2,8 @@ import { useState, useEffect } from 'react'
 import { createPortal } from 'react-dom'
 import './App.css'
 import WGUPSDemo from './WGUPSDemo.jsx'
-import { SiPython, SiReact, SiJavascript, SiHtml5, SiGit, SiLinux, SiVite, SiCplusplus, SiNodedotjs, SiDocker } from 'react-icons/si'
-import { FaDatabase, FaJava } from 'react-icons/fa'
+import { SiPython, SiReact, SiJavascript, SiHtml5, SiGit, SiLinux, SiVite, SiCplusplus, SiNodedotjs, SiDocker, SiTerraform } from 'react-icons/si'
+import { FaDatabase, FaJava, FaAws, FaTerminal } from 'react-icons/fa'
 
 // ── EMAIL LINK ────────────────────────────────────────────────────────────────
 const EMAIL = 'elliottph2772@gmail.com'
@@ -74,6 +74,10 @@ const courses = [
   { name: 'Computer Architecture',                                 cus: 3,  grade: 'Pass', term: 'Core'        },
   { name: 'Operating Systems for Computer Scientists',             cus: 3,  grade: 'Pass', term: 'Core'        },
   { name: 'Introduction to Computer Science',                      cus: 4,  grade: 'Pass', term: 'Core'        },
+  { name: 'Software Engineering',                                  cus: 4,  grade: 'Pass', term: 'Core'        },
+  { name: 'Software Design and Quality Assurance',                 cus: 4,  grade: 'Pass', term: 'Core'        },
+  { name: 'Introduction to AI for Computer Scientists',            cus: 2,  grade: 'Pass', term: 'Core'        },
+  { name: 'Business of IT – Applications',                         cus: 4,  grade: 'Pass', term: 'Core'        },
   // ── Math
   { name: 'Applied Probability and Statistics',                    cus: 3,  grade: 'Pass', term: 'Math'        },
   { name: 'Calculus I',                                            cus: 4,  grade: 'Pass', term: 'Math'        },
@@ -146,11 +150,16 @@ const projects = [
   },
   {
     id: 3,
-    title: 'Next Project Loading . . .',
-    tag: 'You Never Know What The Future May Hold',
+    title: 'Secure Serverless File Vault',
+    tag: 'AWS · React · Terraform',
     description:
-      'Always working on the next project, Stay Tuned!',
-    highlights: ['Coding ?', 'Gaming ?', 'Sports ?'],
+      'An encrypted file-storage web app built on AWS — a self-directed learning project to develop cloud architecture and security fundamentals alongside planned AWS certification study.',
+    highlights: [
+      'Encrypted file storage',
+      'Serverless AWS architecture',
+      'Infrastructure as Code (Terraform)',
+      'In progress',
+    ],
     color: '#ff7fb2',
   },
 ]
@@ -168,6 +177,17 @@ const techStack = [
   { name: 'Vite',        Icon: SiVite,        color: '#646cff' },
   { name: 'C++',         Icon: SiCplusplus,   color: '#00599c' },
   { name: 'Node.js',     Icon: SiNodedotjs,   color: '#339933' },
+  { name: 'AWS',         Icon: FaAws,         color: '#ff9900' },
+  { name: 'Terraform',   Icon: SiTerraform,   color: '#7b42bc' },
+  { name: 'PowerShell',  Icon: FaTerminal,    color: '#5391fe' },
+]
+
+const certifications = [
+  { name: 'Linux Foundations',                   issuer: 'WGU · Linux Foundation', status: 'earned'  },
+  { name: 'ITIL 4 Foundation',                   issuer: 'WGU · Axelos',           status: 'earned'  },
+  { name: 'AWS Certified Cloud Practitioner',    issuer: 'Amazon Web Services',    status: 'planned' },
+  { name: 'CompTIA Security+',                   issuer: 'CompTIA',                status: 'planned' },
+  { name: 'AWS Solutions Architect – Associate', issuer: 'Amazon Web Services',    status: 'planned' },
 ]
 
 // ── PAGES ─────────────────────────────────────────────────────────────────────
@@ -210,7 +230,7 @@ function HomePage() {
   return (
     <div className="page home-page">
       <div className="hero">
-        <div className="hero-tag">B.S. Computer Science · WGU</div>
+        <div className="hero-tag">B.S. Computer Science · WGU · IT Technician @ Nemsys</div>
         <h1 className="hero-name">Elliott Hudson</h1>
       </div>
 
@@ -242,15 +262,28 @@ function HomePage() {
 
       <div className="home-about">
         {[
-          { label: 'Currently',      text: 'B.S. Computer Science student at Western Governors University. Building foundational skills in software engineering.' },
+          { label: 'Currently',      text: 'B.S. Computer Science student at WGU, graduating December 2026. Working as an IT support technician at Nemsys, a managed service provider, where I handle the majority of the Tier 1 queue.' },
           { label: 'Interests',      text: 'Coding, Gaming, PC hardware, AI Integration and The Detroit Lions.' },
-          { label: 'Looking For',    text: 'Tech internships or Junior Software engineering roles where I can contribute real work while finishing my degree.' },
+          { label: 'Looking For',    text: 'Junior software engineering or cloud roles where I can contribute real work while finishing my degree. Long-term focus on cloud engineering, security and DevOps.' },
         ].map((b, i) => (
           <div className="about-block reveal" key={i} style={{ transitionDelay: `${i * 0.13}s` }}>
             <div className="about-block-label">{b.labelNode ?? b.label}</div>
             <p>{b.text}</p>
           </div>
         ))}
+      </div>
+
+      <div className="certs-section reveal" style={{ transitionDelay: '0.3s' }}>
+        <p className="tech-section-sub">Certifications</p>
+        <div className="certs-grid">
+          {certifications.map((c) => (
+            <div className={`cert-card cert-card--${c.status}`} key={c.name}>
+              <div className="cert-status">{c.status === 'earned' ? 'Earned' : 'Planned'}</div>
+              <div className="cert-name">{c.name}</div>
+              <div className="cert-issuer">{c.issuer}</div>
+            </div>
+          ))}
+        </div>
       </div>
 
       <footer className="home-footer reveal" style={{ transitionDelay: '0.52s' }}>
