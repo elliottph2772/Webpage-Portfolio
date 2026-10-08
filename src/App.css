@@ -675,6 +675,17 @@ main {
   font-weight: 600;
 }
 
+.resume-bullets {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin: 0.3rem 0 0;
+  padding-left: 1.2rem;
+  font-size: 0.92rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
 .resume-no-exp {
   font-style: italic;
 }

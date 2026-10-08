@@ -412,23 +412,19 @@ function ResumePage() {
       </div>
       <div className="resume-body">
         <section className="resume-section">
-          <h3 className="resume-section-title">Education</h3>
+          <h3 className="resume-section-title">Work Experience</h3>
           <div className="resume-entry">
             <div className="resume-entry-header">
-              <span className="resume-entry-title">Western Governors University</span>
-              <span className="resume-entry-location">Salt Lake City, Utah</span>
+              <span className="resume-entry-title">Technician Intern — Nemsys (Managed Service Provider)</span>
+              <span className="resume-entry-date">June 2026 – October 2026</span>
             </div>
-            <div className="resume-entry-sub">B.S. Computer Science · Expected Graduation: December 2026 · GPA: 3.8 / 4.0</div>
-            <p className="resume-entry-detail"><strong>Relevant Coursework:</strong> Data Structures &amp; Algorithms I &amp; II, Discrete Mathematics I &amp; II, Advanced Java, Back-End Programming, Linux Foundations (LPI Linux Essentials Cert), Version Control, Information Security</p>
-          </div>
-        </section>
-
-        <section className="resume-section">
-          <h3 className="resume-section-title">Technical Skills</h3>
-          <div className="resume-skills">
-            <div><strong>Languages:</strong> React (Learning on my own time), Java, Python, JavaScript, SQL</div>
-            <div><strong>Tools &amp; Platforms:</strong> GitHub, VS Code, JetBrains IDEs, Linux, Claude, Docker Desktop, MySQL Workbench, Postman</div>
-            <div><strong>Concepts:</strong> Web Design, Data Structures, OOP, Algorithms, Databases, REST APIs</div>
+            <div className="resume-entry-sub">4-month internship · left on good terms to focus on school full-time and finish my degree faster</div>
+            <ul className="resume-bullets">
+              <li>Advanced from a three-month internship track to Tier 1 technician responsibilities in under one month, independently handling the majority of the Tier 1 queue after two months.</li>
+              <li>Used ConnectWise Automate (RMM) and ScreenConnect for remote monitoring, patch management, scripted remediation, and remote session support across managed endpoints.</li>
+              <li>Documented all work in ConnectWise PSA, maintained client environments in IT Glue, and managed credentials through Passportal following least-privilege and audit-trail practices.</li>
+              <li>Balanced a part-time technician workload alongside full-time coursework at a compliance-focused MSP.</li>
+            </ul>
           </div>
         </section>
 
@@ -436,27 +432,52 @@ function ResumePage() {
           <h3 className="resume-section-title">Projects</h3>
           <div className="resume-entry">
             <div className="resume-entry-header">
-              <span className="resume-entry-title">Video Game Project</span>
-              <span className="resume-entry-date">Currently working on</span>
+              <span className="resume-entry-title">Secure Serverless File Vault</span>
+              <span className="resume-entry-date">In Progress</span>
             </div>
-            <div className="resume-entry-tags">React · JavaScript · REST API</div>
-            <p className="resume-entry-detail">Building a web application for competitive video game players in a team setting to aggregate and analyze team performance.</p>
+            <div className="resume-entry-tags">AWS · React · Terraform</div>
+            <p className="resume-entry-detail">Building an encrypted file-storage web app on AWS as a self-directed learning project to develop cloud architecture and security fundamentals alongside planned AWS certification study.</p>
           </div>
           <div className="resume-entry">
             <div className="resume-entry-header">
-              <span className="resume-entry-title">Personal Portfolio Website</span>
-              <span className="resume-entry-date">April 2025</span>
+              <span className="resume-entry-title">Personal Portfolio — eternalhalflife.dev</span>
+              <span className="resume-entry-date">2025</span>
             </div>
-            <div className="resume-entry-tags">React · JavaScript · CSS</div>
-            <p className="resume-entry-detail">Designed and built a personal portfolio site using React framework, showcasing projects &amp; experience. Features a sleek dark-themed UI, animated components, and is deployed live at eternalhalflife.dev. Available on GitHub.</p>
+            <div className="resume-entry-tags">React · Vite · Three.js · Vercel</div>
+            <p className="resume-entry-detail">Designed, built, and deployed a personal portfolio site featuring a Three.js 3D scene, an animated degree-progress tracker, an interactive routing terminal simulation, and a project grid. Managed the full deployment pipeline end to end: domain registration, DNS, hosting, and security header configuration.</p>
           </div>
           <div className="resume-entry">
             <div className="resume-entry-header">
-              <span className="resume-entry-title">WGUPS (Traveling Salesman NP-Complete Problem)</span>
-              <span className="resume-entry-date">November 2025</span>
+              <span className="resume-entry-title">WGUPS Routing System</span>
+              <span className="resume-entry-date">2025</span>
             </div>
             <div className="resume-entry-tags">Python · Data Structures</div>
-            <p className="resume-entry-detail">For Data Structures &amp; Algorithms II we designed our own project to handle daily package intake for a delivery warehouse. Using CSV file imports from excel spreadsheets of package information &amp; delivery address locations, I developed a program that used a Hash Table &amp; Linked List to store the packages and generate routes for the trucks using a distance matrix &amp; Nearest Neighbor Algorithm.</p>
+            <p className="resume-entry-detail">A parcel-delivery simulation handling daily package intake for a delivery warehouse. Imports package and address data from CSV, stores packages in a custom hash table and per-truck linked lists, and generates routes using a distance matrix and nearest-neighbor algorithm under tight deadline and mileage constraints.</p>
+          </div>
+        </section>
+
+        <section className="resume-section">
+          <h3 className="resume-section-title">Technical Skills</h3>
+          <div className="resume-skills">
+            <div><strong>IT Support &amp; Administration:</strong> Windows desktop/server support, Microsoft 365 administration, Active Directory, endpoint troubleshooting, hardware/software deployment, network diagnostics</div>
+            <div><strong>MSP Tooling:</strong> ConnectWise Automate (RMM), ScreenConnect, ConnectWise PSA, IT Glue, Passportal, remote support &amp; ticketing workflows</div>
+            <div><strong>Development:</strong> Python, Java, JavaScript, C++, React, Vite, Node.js, Express, SQL, PostgreSQL, HTML/CSS</div>
+            <div><strong>Tools &amp; Platforms:</strong> Git, GitHub, Linux/Unix, Docker, AWS, Terraform, VS Code, WebStorm, Vercel, PowerShell scripting</div>
+            <div><strong>Concepts:</strong> Data structures &amp; algorithms, object-oriented design, REST APIs, relational database design, software testing, version control workflows</div>
+          </div>
+        </section>
+
+        <section className="resume-section">
+          <h3 className="resume-section-title">Education</h3>
+          <div className="resume-entry">
+            <div className="resume-entry-header">
+              <span className="resume-entry-title">Western Governors University</span>
+              <span className="resume-entry-location">Remote</span>
+            </div>
+            <div className="resume-entry-sub">B.S. Computer Science · Expected Graduation: December 2026 · Final-semester focus: Artificial Intelligence &amp; Machine Learning</div>
+            <p className="resume-entry-detail"><strong>Core Coursework:</strong> Data Structures &amp; Algorithms, Operating Systems, Computer Networks, Database Systems, Software Engineering, Discrete Mathematics, Linear Algebra</p>
+            <p className="resume-entry-detail"><strong>Applied Coursework:</strong> Software Design &amp; Testing, Scripting &amp; Automation, Version Control, Computer Architecture, Business of IT</p>
+            <p className="resume-entry-detail"><strong>Certifications:</strong> Linux Foundations and ITIL 4 Foundation earned through coursework; AWS Certified Cloud Practitioner and CompTIA Security+ planned.</p>
           </div>
         </section>
 
@@ -469,11 +490,6 @@ function ResumePage() {
             </div>
             <p className="resume-entry-detail">Award received for academic accomplishments at WGU.</p>
           </div>
-        </section>
-
-        <section className="resume-section">
-          <h3 className="resume-section-title">Experience</h3>
-          <p className="resume-entry-detail resume-no-exp">No relevant tech experience yet — eager and ready for my first opportunity.</p>
         </section>
       </div>
     </div>
