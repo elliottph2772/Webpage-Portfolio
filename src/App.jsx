@@ -262,9 +262,9 @@ function HomePage() {
 
       <div className="home-about">
         {[
-          { label: 'Currently',      text: 'B.S. Computer Science student at WGU, graduating December 2026. Working as an IT support technician at Nemsys, a managed service provider, where I handle the majority of the Tier 1 queue.' },
-          { label: 'Interests',      text: 'Coding, Gaming, PC hardware, AI Integration and The Detroit Lions.' },
-          { label: 'Looking For',    text: 'Junior software engineering or cloud roles where I can contribute real work while finishing my degree. Long-term focus on cloud engineering, security and DevOps.' },
+          { label: 'Currently',      text: 'B.S. Computer Science student at WGU, graduating December 2026. Focused full-time on finishing my degree after a 4-month IT support internship at Nemsys, a managed service provider.' },
+          { label: 'Interests',      text: 'Coding, Gaming, PC hardware, AI Integration and Cloud Services.' },
+          { label: 'Looking For',    text: 'Junior software engineering or cloud roles where I can contribute real work while finishing my degree. Long-term focus on cloud engineering, security, DevOps & Software Development.' },
         ].map((b, i) => (
           <div className="about-block reveal" key={i} style={{ transitionDelay: `${i * 0.13}s` }}>
             <div className="about-block-label">{b.labelNode ?? b.label}</div>
