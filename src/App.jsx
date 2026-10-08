@@ -137,19 +137,34 @@ const projects = [
 },
   {
     id: 2,
-    title: 'Portfolio Website',
-    tag: 'React · Vite',
+    title: 'Nocturne — D&D Game Master Console',
+    tag: 'Claude AI · JavaScript · Supabase',
     description:
-      'This site — built with React & Vite. Reactive graduation progress tracker, multi-tab routing, and Deployment.',
+      'A real-time virtual tabletop for running Dungeons & Dragons sessions, with an AI-assisted game master powered by Claude for live narration and world-building. The GM drives a shared campaign while up to four players claim character slots from their own devices — HP, dice rolls, inventory, initiative, and notes all sync live.',
     highlights: [
-      'Reactive CU progress bar',
-      'Tab-based SPA routing',
-      'Deployed via Vercel',
+      'AI-assisted GM narration (Claude)',
+      'Real-time multiplayer sync via Supabase',
+      'Claimable player character sheets',
+      'HP, dice, initiative & inventory tracking',
     ],
-    color: '#5b8fff',
+    color: '#9184d9',
   },
   {
     id: 3,
+    title: 'ScrimCoach',
+    tag: 'React · Supabase · Tailwind',
+    description:
+      'A full-stack team-management and coaching platform for competitive esports teams — roster management, scheduling, and review tools in one place. Built with React and Supabase. (Details kept light while in active development.)',
+    highlights: [
+      'Full-stack React + Supabase',
+      'Discord OAuth sign-in',
+      'Real-time team & roster data',
+      'Multi-game support',
+    ],
+    color: '#ff6b6b',
+  },
+  {
+    id: 4,
     title: 'Secure Serverless File Vault',
     tag: 'AWS · React · Terraform',
     description:
@@ -161,6 +176,19 @@ const projects = [
       'In progress',
     ],
     color: '#ff7fb2',
+  },
+  {
+    id: 5,
+    title: 'Portfolio Website',
+    tag: 'React · Vite',
+    description:
+      'This site — built with React & Vite. Reactive graduation progress tracker, multi-tab routing, and Deployment.',
+    highlights: [
+      'Reactive CU progress bar',
+      'Tab-based SPA routing',
+      'Deployed via Vercel',
+    ],
+    color: '#5b8fff',
   },
 ]
 
@@ -432,6 +460,30 @@ function ResumePage() {
           <h3 className="resume-section-title">Projects</h3>
           <div className="resume-entry">
             <div className="resume-entry-header">
+              <span className="resume-entry-title">WGUPS Routing System</span>
+              <span className="resume-entry-date">2025</span>
+            </div>
+            <div className="resume-entry-tags">Python · Data Structures</div>
+            <p className="resume-entry-detail">A parcel-delivery simulation handling daily package intake for a delivery warehouse. Imports package and address data from CSV, stores packages in a custom hash table and per-truck linked lists, and generates routes using a distance matrix and nearest-neighbor algorithm under tight deadline and mileage constraints. Includes an interactive in-browser demo.</p>
+          </div>
+          <div className="resume-entry">
+            <div className="resume-entry-header">
+              <span className="resume-entry-title">Nocturne — D&amp;D Game Master Console</span>
+              <span className="resume-entry-date">In Progress</span>
+            </div>
+            <div className="resume-entry-tags">Claude AI · JavaScript · Supabase</div>
+            <p className="resume-entry-detail">A real-time virtual tabletop for running Dungeons &amp; Dragons sessions, with an AI-assisted game master powered by Claude for live narration and world-building. The game master drives a shared campaign while up to four players claim character slots from their own devices — HP, dice rolls, inventory, initiative, and notes stay in sync live through Supabase realtime, with campaign-code access control.</p>
+          </div>
+          <div className="resume-entry">
+            <div className="resume-entry-header">
+              <span className="resume-entry-title">ScrimCoach</span>
+              <span className="resume-entry-date">In Progress</span>
+            </div>
+            <div className="resume-entry-tags">React · Supabase · Tailwind</div>
+            <p className="resume-entry-detail">A full-stack team-management and coaching platform for competitive esports teams — roster management, scheduling, and review tools with Discord OAuth sign-in and real-time data via Supabase. (Details kept light while in active development.)</p>
+          </div>
+          <div className="resume-entry">
+            <div className="resume-entry-header">
               <span className="resume-entry-title">Secure Serverless File Vault</span>
               <span className="resume-entry-date">In Progress</span>
             </div>
@@ -445,14 +497,6 @@ function ResumePage() {
             </div>
             <div className="resume-entry-tags">React · Vite · Three.js · Vercel</div>
             <p className="resume-entry-detail">Designed, built, and deployed a personal portfolio site featuring a Three.js 3D scene, an animated degree-progress tracker, an interactive routing terminal simulation, and a project grid. Managed the full deployment pipeline end to end: domain registration, DNS, hosting, and security header configuration.</p>
-          </div>
-          <div className="resume-entry">
-            <div className="resume-entry-header">
-              <span className="resume-entry-title">WGUPS Routing System</span>
-              <span className="resume-entry-date">2025</span>
-            </div>
-            <div className="resume-entry-tags">Python · Data Structures</div>
-            <p className="resume-entry-detail">A parcel-delivery simulation handling daily package intake for a delivery warehouse. Imports package and address data from CSV, stores packages in a custom hash table and per-truck linked lists, and generates routes using a distance matrix and nearest-neighbor algorithm under tight deadline and mileage constraints.</p>
           </div>
         </section>
 
