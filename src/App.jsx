@@ -155,10 +155,6 @@ const projects = [
         label: 'Interactive Demo',
         component: <NocturneDemo />,
       },
-      {
-        label: 'How It Works',
-        content: 'The game master runs a shared campaign from a console while players join from their own devices using a campaign code. Character sheets, HP, initiative, inventory, and dice all live in Supabase and sync to every client in real time. An AI game master layer powered by Claude handles narration and world-building on top of the live table.',
-      },
     ],
   },
   {
@@ -178,10 +174,6 @@ const projects = [
       {
         label: 'Interactive Demo',
         component: <ScrimCoachDemo />,
-      },
-      {
-        label: 'Overview',
-        content: 'A full-stack React + Supabase platform for competitive esports teams, gated behind Discord sign-in. The demo above is an abstract preview — the specifics are kept under wraps while the product is in active development.',
       },
     ],
   },
@@ -358,19 +350,22 @@ function ProjectDetail({ project, onBack }) {
           <div className="detail-section-label">Overview</div>
           <p>{project.description}</p>
         </div>
+        {(project.details || []).filter(b => b.component).map((block, i) => (
+          <div className="detail-section" key={`demo${i}`}>
+            <div className="detail-section-label">{block.label}</div>
+            <div style={{ gridColumn: '1 / -1' }}>{block.component}</div>
+          </div>
+        ))}
         <div className="detail-section">
           <div className="detail-section-label">Key Features</div>
           <ul className="detail-highlights">
             {project.highlights.map((h, i) => <li key={i}>{h}</li>)}
           </ul>
         </div>
-        {project.details && project.details.map((block, i) => (
-          <div className="detail-section" key={i}>
+        {(project.details || []).filter(b => !b.component).map((block, i) => (
+          <div className="detail-section" key={`text${i}`}>
             <div className="detail-section-label">{block.label}</div>
-            {block.component
-              ? <div style={{ gridColumn: '1 / -1' }}>{block.component}</div>
-              : <p>{block.content}</p>
-            }
+            <p>{block.content}</p>
           </div>
         ))}
       </div>
